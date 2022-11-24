@@ -1,6 +1,9 @@
 package org.example.clasesSeleccion;
 
+import java.util.Scanner;
+
 public class Jugador {
+    Scanner entradaDatos = new Scanner(System.in);
 
     //Atributos
     private int numeroCamiseta;
@@ -10,9 +13,7 @@ public class Jugador {
     private int edad;
     private String equipoJugador;
 
-    // método constructor
-
-
+    // Método constructor
     public Jugador() {
     }
 
@@ -25,62 +26,70 @@ public class Jugador {
         this.equipoJugador = equipoJugador;
     }
 
-    // get y set
+    // Get y set
 
     public int getNumeroCamiseta() {
+
         return numeroCamiseta;
     }
 
     public void setNumeroCamiseta(int numeroCamiseta) {
+
         this.numeroCamiseta = numeroCamiseta;
     }
 
     public String getNombres() {
+
         return nombres;
     }
 
     public void setNombres(String nombres) {
+
         this.nombres = nombres;
     }
 
     public String getApellidos() {
+
         return apellidos;
     }
 
     public void setApellidos(String apellidos) {
+
         this.apellidos = apellidos;
     }
 
     public String getPosicion() {
+
         return posicion;
     }
 
     public void setPosicion(String posicion) {
+
         this.posicion = posicion;
     }
 
     public int getEdad() {
+
         return edad;
     }
 
     public void setEdad(int edad) {
+        while(edad <= 17){
+            System.out.print("La edad debe ser igual o mayor de 18 años, ingresa la edad nuevamente: ");
+            edad = entradaDatos.nextInt();
+        }
         this.edad = edad;
     }
 
     public String getEquipoJugador() {
+
         return equipoJugador;
     }
 
     public void setEquipoJugador(String equipoJugador) {
+
         this.equipoJugador = equipoJugador;
     }
-
-
-
-
-
-
-
 }
 
 
